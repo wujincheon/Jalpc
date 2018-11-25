@@ -13,6 +13,8 @@ icon: icon-html
 
 ---
 
+&nbsp;
+
 ## 1. Density-based Novelty Detection
 >  
 주어진 데이터를 기반으로 어떤 분포를 가지는지 밀도 함수를 구하는 것이 목적이라고 할 수 있습니다.  
@@ -21,6 +23,8 @@ icon: icon-html
 ![](https://i.imgur.com/LsDoDAF.png?1)
 
 ---
+
+&nbsp;
 
 ## 2. Gaussian Density Estimation 
 >  
@@ -37,9 +41,9 @@ icon: icon-html
  
  $$p(x)= {1\over{(2\pi)^{d\over2} \left\vert \sum \right\vert^{1\over2} }} exp[{1\over2}(x-u)^T (\sum)^{-1}(x-u)]$$  
  
- $$u={ {1\over n} \sum_{x_i \in X^+} x_i} $$ (mean vector)  
+ $$u={ {1\over n} \sum_{x_i \in X^+} x_i} $$   
  
- $$\sum = { {1 \over n} \sum_{x_i \in X^+} (x_i-u)(x_i-u)^T} $$ (covariance matrix)  
+ $$\sum = { {1 \over n} \sum_{x_i \in X^+} (x_i-u)(x_i-u)^T} $$  
  
  여기서의 X+는 normal data에 해당하는 영역이라고 보면 됩니다.  
  
@@ -53,9 +57,9 @@ icon: icon-html
  
  3. 위의 식을 log화 하고 미분하게 되면, 우리가 흔히 알고 있는 정규분포의 평균과 분산값을 얻을 수 있게 됩니다.  
  
- $$u={ {1\over N} \sum_{i=1}^N x_i} $$ (mean vector)  
+ $$u={ {1\over N} \sum_{i=1}^N x_i} $$   
  
- $$\sum = { {1 \over N} \sum_{i=1}^N (x_i-u)(x_i-u)^T} $$ (covariance matrix) 
+ $$\sum = { {1 \over N} \sum_{i=1}^N (x_i-u)(x_i-u)^T} $$  
  
 &nbsp; 
 
