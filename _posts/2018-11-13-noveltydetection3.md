@@ -14,6 +14,8 @@ icon: icon-html
 
 ---
 
+&nbsp;
+
 ## 1. Kernel-density Estimation
 >  
 앞선 포스팅에서 소개한 가우시안 밀도 추정과는 다르게, 어떠한 분포도 가정하지 않고 데이터로부터 분포를 매우 불규칙하게 추정해내는 방법입니다. 따라서 아래 그림처럼 데이터 자체가 분포가 됨을 볼 수 있습니다.  
@@ -56,6 +58,8 @@ icon: icon-html
  
  &nbsp;
  
+ ---
+ 
 ## 2. Parzen Window Density Estimation 
 >  
 창문처럼 각진 다면체를 특정 포인트를 중심으로 만들고, 그 다면체 안에 들어오는 객체의 수를 세는 방식입니다. 
@@ -79,6 +83,8 @@ icon: icon-html
 ![](https://i.imgur.com/5JuggeP.png)
 
 &nbsp;
+
+---
 
 ## 3. Local Outlier Factors(LOF)
 >  
