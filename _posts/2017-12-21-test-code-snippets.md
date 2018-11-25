@@ -11,7 +11,7 @@ icon: icon-html
 
 This is a raw snippet:
 
-```
+```python
 hello world
 123
 This is a text snippet
