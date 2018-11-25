@@ -92,6 +92,9 @@ Anomaly Detection, Fault Detection으로도 불리며, normal data를 형성하�
 ##### 1. Confusion Matrix
 아래 그림과 같이 무엇으로 예측했을 때 실제값이 어떤지, 에 대한 값을 표로 나타낼 수 있습니다.  
 ![](https://i.imgur.com/AbCTO5z.png)  
+
+&nbsp;
+
 그러면 이 값들을 이용해서 얼마나 Novel data를 잘 잡아내는지, 예측을 얼마나 잘못하는지에 대한 지표를 아래의 표처럼 정의할 수 있습니다.  
 ![](https://i.imgur.com/VieVIoM.png)
 
