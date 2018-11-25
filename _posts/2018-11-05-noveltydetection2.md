@@ -31,7 +31,7 @@ icon: icon-html
 #### 2-1. 가우시안 밀도 함수 추정 과정
  1. 먼저 아래 식과 같은 가우시안 분포를 가정한 것이기 때문에, 분포의 평균과 분산을 추정하면 됩니다. 
  $$p(x)= {1\over{(2\pi)^{d\over2} \left\vert \sum \right\vert^{1\over2} }} exp[{1\over2}(x-u)^T (\sum)^{-1}(x-u)]$$  
- $$u={{1\over n} \sum_{x_i \in X^+} x_i} $$ (mean vector)  
+ $$u={ {1\over n} \sum_{x_i \in X^+} x_i} $$ (mean vector)  
  $$\sum = {{1 \over n} \sum_{x_i \in X^+} (x_i-u)(x_i-u)^T} $$ (covariance matrix)  
  여기서의 X+는 normal data에 해당하는 영역이라고 보면 됩니다.  
  
