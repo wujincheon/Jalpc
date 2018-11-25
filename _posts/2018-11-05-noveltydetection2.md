@@ -32,7 +32,7 @@ icon: icon-html
  1. 먼저 아래 식과 같은 가우시안 분포를 가정한 것이기 때문에, 분포의 평균과 분산을 추정하면 됩니다. 
  $$p(x)= {1\over{(2\pi)^{d\over2} \left\vert \sum \right\vert^{1\over2} }} exp[{1\over2}(x-u)^T (\sum)^{-1}(x-u)]$$  
  $$u={ {1\over n} \sum_{x_i \in X^+} x_i} $$ (mean vector)  
- $$\sum = {{1 \over n} \sum_{x_i \in X^+} (x_i-u)(x_i-u)^T} $$ (covariance matrix)  
+ $$\sum = { {1 \over n} \sum_{x_i \in X^+} (x_i-u)(x_i-u)^T} $$ (covariance matrix)  
  여기서의 X+는 normal data에 해당하는 영역이라고 보면 됩니다.  
  
  2. 평균과 분산 추정시, 각 데이터들의 가우시안 분포 확률값의 곱이 최대가 되도록 평균과 분산을 잡아줍니다. 아래 그림을 보면 알 수 있듯이 특정 값에 해당하는 확률값들이 높은, 즉 왼쪽의 분포가 데이터의 분포를 좀 더 잘 설명한다고 할 수 있기 때문입니다.
@@ -41,8 +41,8 @@ icon: icon-html
  여기서 평균과 분산값은, normal data만을 이용해서 구한 값입니다.
  
  3. 위의 식을 log화 하고 미분하게 되면, 우리가 흔히 알고 있는 정규분포의 평균과 분산값을 얻을 수 있게 됩니다.
- $$u={{1\over N} \sum_{i=1}^N x_i} $$ (mean vector)  
- $$\sum = {{1 \over N} \sum_{i=1}^N (x_i-u)(x_i-u)^T} $$ (covariance matrix) 
+ $$u={ {1\over N} \sum_{i=1}^N x_i} $$ (mean vector)  
+ $$\sum = { {1 \over N} \sum_{i=1}^N (x_i-u)(x_i-u)^T} $$ (covariance matrix) 
  
 #### 2-2. 공분산 행렬 형태에 따른 결과
 위의 식에서 공분산 행렬로 Full 형태를 써야하지만, 연산 비용이 너무 크기 때문에 가능한 형태가 여러가지 존재합니다.
