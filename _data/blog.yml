@@ -3,11 +3,11 @@
   href: /blog/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
-- name: MACHINE LEARNING
-  href: /MACHINE LEARNING/
+- name: Machine learning
+  href: /machine learning/
 
-- name: DEEP LEARNING
-  href: /DEEP LEARNING/
+- name: Deep learning
+  href: /deep learning/
 
 - name: HTML
   href: /html/
