@@ -10,7 +10,7 @@ icon: icon-html
 ---
 
 This is a raw snippet:
-
+$$a= \sum b$$
 ```python
 hello world
 123
