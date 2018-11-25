@@ -30,26 +30,26 @@ icon: icon-html
 
 #### 2-1. 가우시안 밀도 함수 추정 과정
  1. 먼저 아래 식과 같은 가우시안 분포를 가정한 것이기 때문에, 분포의 평균과 분산을 추정하면 됩니다. 
- $$p(x)= {1\over{(2\pi)^{d\over2} \left\vert \sum \right\vert^{1\over2} }} exp[{1\over2}(x-u)^T (\sum)^{-1}(x-u)]$$
- $$u={{1\over n} \sum_{x_i \in X^+} x_i} $$ (mean vector)
- $$\sum = {{1 \over n} \sum_{x_i \in X^+} (x_i-u)(x_i-u)^T} $$ (covariance matrix)
+ $$p(x)= {1\over{(2\pi)^{d\over2} \left\vert \sum \right\vert^{1\over2} }} exp[{1\over2}(x-u)^T (\sum)^{-1}(x-u)]$$  
+ $$u={{1\over n} \sum_{x_i \in X^+} x_i} $$ (mean vector)  
+ $$\sum = {{1 \over n} \sum_{x_i \in X^+} (x_i-u)(x_i-u)^T} $$ (covariance matrix)  
  여기서의 X+는 normal data에 해당하는 영역이라고 보면 됩니다.  
  
  2. 평균과 분산 추정시, 각 데이터들의 가우시안 분포 확률값의 곱이 최대가 되도록 평균과 분산을 잡아줍니다. 아래 그림을 보면 알 수 있듯이 특정 값에 해당하는 확률값들이 높은, 즉 왼쪽의 분포가 데이터의 분포를 좀 더 잘 설명한다고 할 수 있기 때문입니다.
 ![](https://i.imgur.com/CEeEouY.png)
- $$L=\prod_{i=1}^N P(x_i|u,\sigma^2) = \prod_{i=1}^N {1 \over {\sqrt{2\pi}\sigma}}exp(- {{(x_i-u)^2} \over {2\sigma^2}})$$
+ $$L=\prod_{i=1}^N P(x_i|u,\sigma^2) = \prod_{i=1}^N {1 \over {\sqrt{2\pi}\sigma}}exp(- {{(x_i-u)^2} \over {2\sigma^2}})$$  
  여기서 평균과 분산값은, normal data만을 이용해서 구한 값입니다.
  
  3. 위의 식을 log화 하고 미분하게 되면, 우리가 흔히 알고 있는 정규분포의 평균과 분산값을 얻을 수 있게 됩니다.
- $$u={{1\over N} \sum_{i=1}^N x_i} $$ (mean vector)
- $$\sum = {{1 \over N} \sum_{i=1}^N (x_i-u)(x_i-u)^T} $$ (covariance matrix)
+ $$u={{1\over N} \sum_{i=1}^N x_i} $$ (mean vector)  
+ $$\sum = {{1 \over N} \sum_{i=1}^N (x_i-u)(x_i-u)^T} $$ (covariance matrix) 
  
 #### 2-2. 공분산 행렬 형태에 따른 결과
 위의 식에서 공분산 행렬로 Full 형태를 써야하지만, 연산 비용이 너무 크기 때문에 가능한 형태가 여러가지 존재합니다.
  1. Spherical - 각 변수들의 분산합의 평균으로 모든 변수들의 분산값을 정의한 것으로, 항상 원 모양으로 그려집니다.
- ![](https://i.imgur.com/kcSgTxR.png?1)
+ ![](https://i.imgur.com/kcSgTxR.png?1)  
  2. Diagonal - 변수간의 공분산은 0으로 정의하지만 변수들의 분산값을 다르게 지정하여 축방향은 유지하되 크기가 다르도록 만들어 주는 방법입니다. 연산 비용도 절약되면서 변수마다의 분산을 고려하기에 가장 많이 쓰인다고 합니다.
- ![](https://i.imgur.com/AsLkFTJ.png?1)
+ ![](https://i.imgur.com/AsLkFTJ.png?1)  
  3. Full - 원래의 공분산 행렬을 모두 가져다 쓴것으로 모양이 다양하게 나오지만, 변수의 수가 많아서 역행렬을 구하기 매우 어렵거나 불가능한 경우가 나올 수 있기 때문에 2번 방법을 많이 쓴다고 합니다.
  ![](https://i.imgur.com/KdRWBKz.png?1)
 
@@ -83,7 +83,7 @@ icon: icon-html
  $$w_m^{(new)} = {1 \over N}\sum_{i=1}^N p(m|x_i,\lambda)$$  
  
  그리고 분포마다의 평균과 분산값도 객체들의 확률값을 이용해서 새롭게 구할 수 있습니다.
- $$u_m^{(new)} = {{\sum_{i=1}^N p(m|x_i,\lambda)x_i}\over {\sum_{i=1}^N p(m|x_i,\lambda)}}$$  
+ $$u_m^{(new)} = {{\sum_{i=1}^N p(m|x_i,\lambda)x_i}\over {\sum_{i=1}^N p(m|x_i,\lambda)}}$$    
  $$\sigma_m^{2(new)} = {{\sum_{i=1}^N p(m|x_i,\lambda)x_i^2}\over {\sum_{i=1}^N p(m|x_i,\lambda)}} - u_m^{2(new)}$$  
  
  
