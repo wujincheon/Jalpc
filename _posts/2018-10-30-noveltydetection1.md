@@ -24,15 +24,15 @@ Novel Data, Outliers. 즉, 다른 데이터들에 비해 다른 성질을 가지
 
 &nbsp;
 
-1. **Global Outlier**  
+**Global Outlier**  
 아래 그림과 같이 다른 데이터들과는 확실하게, 상당하게 동떨어져 있는 데이터를 의미합니다.  
 ![](https://i.imgur.com/6X37rai.png?1)
 
-2. **Contextual Outlier**  
+**Contextual Outlier**  
 아래의 그림은 연간 온도의 변화량을 나타낸 그래프입니다. Normal로 표시된 부분에서의 온도와 Anomaly 부분에서의 온도는 비슷한 값을 가지지만, 앞뒤의 온도 변화 맥락을 고려하면 왜 같은 값인데도 Novel data로 판별되는지 알 수 있습니다.  
 ![](https://i.imgur.com/wejkB9D.png)
 
-3. **Collective Outlier**  
+**Collective Outlier**  
 아래 그림을 보면, 검은 객체 하나하나가 전체 데이터 측면에서는 이상치가 아니지만, 검은 원들이 모이는 군집은 전체 원들의 배치와는 다른 형태를 띄는 것을 볼 수 있습니다. 이런 형태의 데이터들을 Collective Outlier라고 정의합니다.  
 ![](https://i.imgur.com/XSGUXB5.png)
 
