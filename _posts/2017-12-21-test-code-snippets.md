@@ -9,7 +9,7 @@ tags: [Jalpc,Jekyll]
 icon: icon-html
 ---
 
-This is a raw snippet:
+This is a raw snippet:  
 $$a= \sum b$$
 ```python
 hello world
