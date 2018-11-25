@@ -9,9 +9,6 @@ url: https://wujincheon.github.io/  # url should be 'http://<github_username>.gi
 # url: http://127.0.0.1:4000
 img_path: /wujincheon.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
-disqus_url: disqus.com/by/wujincheon
-disqus_id: wujincheon
-
 # author -- index page "about me" section
 author:  # change following line to your infomation.
   name: wujincheon  # Be used at blog posts' author.
@@ -34,7 +31,7 @@ author:  # change following line to your infomation.
   desc: DSBA 연구실 석사과정.  # Describe yourself.
 
 # comment
-disqus: https-wujincheon-github-io.disqus.com # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
+disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
   name: wujincheon
 
 # analytics
