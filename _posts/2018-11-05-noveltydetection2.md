@@ -37,7 +37,7 @@ icon: icon-html
  
  2. 평균과 분산 추정시, 각 데이터들의 가우시안 분포 확률값의 곱이 최대가 되도록 평균과 분산을 잡아줍니다. 아래 그림을 보면 알 수 있듯이 특정 값에 해당하는 확률값들이 높은, 즉 왼쪽의 분포가 데이터의 분포를 좀 더 잘 설명한다고 할 수 있기 때문입니다.
 ![](https://i.imgur.com/CEeEouY.png)
- $$L=\prod_{i=1}^N P(x_i|u,\sigma^2) = \prod_{i=1}^N {1 \over {\sqrt{2\pi}\sigma}}exp(- {{(x_i-u)^2} \over {2\sigma^2}})$$  
+ $$L=\prod_{i=1}^N P(x_i|u,\sigma^2) = \prod_{i=1}^N {1 \over {\sqrt{2\pi}\sigma} }exp(- { {(x_i-u)^2} \over {2\sigma^2}})$$  
  여기서 평균과 분산값은, normal data만을 이용해서 구한 값입니다.
  
  3. 위의 식을 log화 하고 미분하게 되면, 우리가 흔히 알고 있는 정규분포의 평균과 분산값을 얻을 수 있게 됩니다.
@@ -69,22 +69,22 @@ icon: icon-html
 #### 3-1. 혼합 가우시안 밀도 함수 추정 과정
  1. 이번에도 마찬가지로 여러 개의 가우시안 분포를 가정한 것이기 때문에, 여러 분포들의 평균과 분산들을 추정하면 됩니다.
  그런데 이번에는 한개의 분포가 아니기 때문에 아래의 식처럼 각 분포에 대한 가중치를 통해 선형결합으로 나타내면, 객체가 normal data에 포함될지에 대한 확률값을 얻을 수 있습니다.
- $$p(x|\lambda) = \sum_{m=1}^M w_m g(x|u_m,\Sigma _m$$  
+ $$p(x|\lambda) = \sum_{m=1}^M w_m g(x|u_m,\Sigma_m)$$  
  
  2. **Expectation-Maximization Algorithm**  
 
 ![](https://i.imgur.com/pRV8BNZ.png)
  - Expectation
  먼저 특정 객체가 주어졌을때, 가중치, 평균, 공분산을 이용해서 m개의 분포에 대해 각각 확률값을 구해줄 수 있습니다. 초기값은 임의로 설정하여 진행합니다.  
-  $$p(m|x_i,\lambda) ={ w_mg(x_i|u_m,\Sigma_m) \over {\sum_{k=1}^M w_kg(x_i|u_k,\Sigma_k)}}$$  
+  $$p(m|x_i,\lambda) ={ w_mg(x_i|u_m,\Sigma_m) \over {\sum_{k=1}^M w_kg(x_i|u_k,\Sigma_k)} }$$  
   
  - Maximization
  위에서 구한 객체들의 확률값을 분포마다 합산해줍니다. 그러면 분포들의 가중치를 새롭게 구할 수 있게 됩니다.  
  $$w_m^{(new)} = {1 \over N}\sum_{i=1}^N p(m|x_i,\lambda)$$  
  
  그리고 분포마다의 평균과 분산값도 객체들의 확률값을 이용해서 새롭게 구할 수 있습니다.
- $$u_m^{(new)} = {{\sum_{i=1}^N p(m|x_i,\lambda)x_i}\over {\sum_{i=1}^N p(m|x_i,\lambda)}}$$    
- $$\sigma_m^{2(new)} = {{\sum_{i=1}^N p(m|x_i,\lambda)x_i^2}\over {\sum_{i=1}^N p(m|x_i,\lambda)}} - u_m^{2(new)}$$  
+ $$u_m^{(new)} = { {\sum_{i=1}^N p(m|x_i,\lambda)x_i}\over {\sum_{i=1}^N p(m|x_i,\lambda)} }$$    
+ $$\sigma_m^{2(new)} = { {\sum_{i=1}^N p(m|x_i,\lambda)x_i^2}\over {\sum_{i=1}^N p(m|x_i,\lambda)} } - u_m^{2(new)}$$  
  
  
  
