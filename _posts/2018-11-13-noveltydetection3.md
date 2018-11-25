@@ -87,7 +87,7 @@ icon: icon-html
  5. **local outlier factor*** 정의
   - 기준으로 하는 p점의 밀도뿐 아니라, k-distance(p)에 들어오는 점들의 밀도를 모두 고려해서 상대적인 밀도값을 산출해낼 수 있기 때문에 다른 점들과 얼마나 떨어져있는지 판단할 수 있는 척도가 됩니다.
 
-$$LOF_k(p)={{ {1 \over lrd_k(p)}\sum_{O \in N_k(p)} lrd_k(o) } \over |N_k(p|}$$
+$$LOF_k(p)={ { {1 \over lrd_k(p)}\sum_{O \in N_k(p)} lrd_k(o) } \over |N_k(p|}$$
 ![](https://i.imgur.com/WolukLz.png)
 
 - Case1과 Case3에서는 파란점의 lrd(4번 정의 참고)와 주위 녹색점들의 lrd값이 유사해서, 즉 주변 밀도가 비슷하므로 이상치로 판단되지 않습니다.
