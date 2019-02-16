@@ -4,7 +4,7 @@ title: "From News Crawling to TF-IDF"
 date: 2019-01-28 
 desc: "From News Crawling to TF-IDF"
 keywords: "HTML, Crawling, TF-IDF"
-categories: [Natural Language Processing]
+categories: [Natural language processing]
 tags: [HTML, Crawling, TF-IDF]
 icon: icon-html
 ---
@@ -25,7 +25,7 @@ icon: icon-html
 바로 html 코드상에서 나타나는 각 기사의 주소를 크롤링하면 되는 것입니다. 그럼 html 코드를 페이지 소스 보기를 통해 살펴보겠습니다.  
 
 ![](https://i.imgur.com/PG3IDRA.png?1)  
-각 기사를 나타내는 제목 앞에 보면 '<a href="~~">' 의 형식으로 링크가 걸려있는 것을 확인할 수 있습니다. 그래서 저는 BeautifulSoup 패키지를 이용해서 원하는 날짜에 대한 페이지에서 각각의 기사 제목들을 클릭하면 나타나는 기사들의 인터넷 주소들을 얻어냈습니다. 추가적으로 해당 날짜마다 창에서는 15개씩의 기사밖에 보여주지 않기 때문에, 페이지를 20여 페이지까지 늘려서 총 300여개의 기사 링크를 얻었습니다. 그리고 날짜도 변경시켜가며 일주일치, 총 2000여개의 기사 링크를 먼저 리스트로 저장하는 작업을 진행했습니다. 아래 코드를 참고하시면 됩니다.  
+각 기사를 나타내는 제목 앞에 보면 a href = "http~" 의 형식으로 링크가 걸려있는 것을 확인할 수 있습니다. 그래서 저는 BeautifulSoup 패키지를 이용해서 원하는 날짜에 대한 페이지에서 각각의 기사 제목들을 클릭하면 나타나는 기사들의 인터넷 주소들을 얻어냈습니다. 추가적으로 해당 날짜마다 창에서는 15개씩의 기사밖에 보여주지 않기 때문에, 페이지를 20여 페이지까지 늘려서 총 300여개의 기사 링크를 얻었습니다. 그리고 날짜도 변경시켜가며 일주일치, 총 2000여개의 기사 링크를 먼저 리스트로 저장하는 작업을 진행했습니다. 아래 코드를 참고하시면 됩니다.  
 
 ```python
 import urllib.request
